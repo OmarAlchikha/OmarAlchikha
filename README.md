@@ -2,7 +2,7 @@
 
 **Electrical Engineering @ York University (Lassonde)** — power electronics, embedded hardware, and the electrical systems behind aircraft and EVs.
 
-Currently a **Project Engineering Intern at De Havilland Aircraft of Canada**, working aircraft modification and engineering configuration on the Dash 8-400 and DHC-515 programs. Graduating May 2028.
+Currently a **Project Engineering Intern at De Havilland Aircraft of Canada**, working aircraft modification and engineering configuration on the Dash 8-123 & 400 programs. Graduating May 2028.
 
 The repos here are personal project work, built on public engineering knowledge only. They run in three threads.
 
