@@ -4,16 +4,16 @@ At De Havilland I'm a Project Engineering Intern on the Dash 8 programs, and lat
 
 ## Projects I'd start with
 
-Most of these are design and simulation work so far. Every README says up front what's been simulated, what's been built and what's still planned.
-
-| Project | What it is | Where it's at |
+| Project | What I built | Status |
 |---|---|---|
-| [FPGA-Digital-Control-Core-DE10-Lite](https://github.com/OmarAlchikha/FPGA-Digital-Control-Core-DE10-Lite) | PWM generator and quadrature encoder decoder in Verilog | 23/23 self-checking testbench checks pass, not on the board yet |
-| [buck-converter](https://github.com/OmarAlchikha/buck-converter) | 12 V to 5 V, 2 A switching regulator with an analog PI loop | designed and simulated in Python, hardware package ready |
-| [Three-Phase-Inverter-PMSM-Drive-FOC](https://github.com/OmarAlchikha/Three-Phase-Inverter-PMSM-Drive-FOC) | field-oriented control of a permanent-magnet motor, like an EV drive | Python switching simulation |
-| [Arc-fault-ground-fault-detection-for-DC-wiring](https://github.com/OmarAlchikha/Arc-fault-ground-fault-detection-for-DC-wiring) | catches series arcs in DC wiring from their noise signature | validated in simulation, hardware designed |
-| [Automatic-bus-transfer-controller](https://github.com/OmarAlchikha/Automatic-bus-transfer-controller) | keeps a 28 VDC bus powered by switching between three sources | Python simulation |
-| [Battery-SOC-Estimator](https://github.com/OmarAlchikha/Battery-SOC-Estimator) | coulomb counting vs. a Kalman filter for battery state of charge | run on a synthetic dataset |
+| [FPGA-Digital-Control-Core-DE10-Lite](https://github.com/OmarAlchikha/FPGA-Digital-Control-Core-DE10-Lite) | Verilog PWM generator and quadrature decoder, verified with self-checking testbenches (23/23 pass) | RTL + simulation |
+| [buck-converter](https://github.com/OmarAlchikha/buck-converter) | 100 kHz, 12 V → 5 V converter with an analog PI loop; 7.77 kHz crossover, 49° phase margin | Python sim, build package ready |
+| [Three-Phase-Inverter-PMSM-Drive-FOC](https://github.com/OmarAlchikha/Three-Phase-Inverter-PMSM-Drive-FOC) | EV-style field-oriented motor control: 0 → 2000 rpm in 55 ms inside a 120 A limit | Python switching sim |
+| [Arc-fault-ground-fault-detection-for-DC-wiring](https://github.com/OmarAlchikha/Arc-fault-ground-fault-detection-for-DC-wiring) | Arc detector catching 99.3 % of arcs at a 0.33 % nuisance rate, with C firmware matching the Python reference | Monte-Carlo sim, hardware designed |
+| [Automatic-bus-transfer-controller](https://github.com/OmarAlchikha/Automatic-bus-transfer-controller) | Break-before-make 28 VDC source switching with a 120 ms worst-case dropout | Python sim |
+| [Battery-SOC-Estimator](https://github.com/OmarAlchikha/Battery-SOC-Estimator) | Extended Kalman filter that recovers from a 50 % wrong start and holds ±0.6 % SOC error | synthetic dataset |
+
+Each README has a short Project status section with what's done and what's next.
 
 **Other projects:** [DC motor speed control](https://github.com/OmarAlchikha/DC-Motor-Speed-Controller-System-ID-PI) · [caution/advisory panel](https://github.com/OmarAlchikha/System-health-aggregator-caution-advisory-panel) · [redundant sensor voting](https://github.com/OmarAlchikha/Redundant-sensor-voting-module) · [EMC test rig](https://github.com/OmarAlchikha/EMC-pre-compliance-rig) · [hybrid powertrain controller](https://github.com/OmarAlchikha/Hybrid-electric-powertrain-energy-management-controller)
 
@@ -21,7 +21,7 @@ I use Claude Code as a design assistant and work through each part myself. Every
 
 ## Tools I use
 
-C, Python, Java, Verilog, MATLAB/Simulink, LTspice, Quartus, Icarus Verilog, Arduino, DE10-Lite
+C, Python, Java, Verilog, MATLAB, LTspice, Quartus, Icarus Verilog, Arduino
 
 ## Contact
 
