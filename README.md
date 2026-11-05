@@ -25,4 +25,4 @@ C, Python, Java, Verilog, MATLAB/Simulink, LTspice, Quartus, Icarus Verilog, Ard
 
 ## Contact
 
-[om.alchikha@gmail.com](mailto:om.alchikha@gmail.com) · [LinkedIn](https://www.linkedin.com/in/omaral-chikha)
+[om.alchikha@gmail.com](mailto:om.alchikha@gmail.com) · [LinkedIn](https://www.linkedin.com/in/omaral-chikha) · [Portfolio](https://aerial-culotte-643.notion.site/Omar-Alchikha-2145470e82c98075ae93fd3308567f9f) · [Resume (PDF)](Omar_Alchikha_Resume.pdf)
