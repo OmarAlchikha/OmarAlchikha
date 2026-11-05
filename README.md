@@ -1,47 +1,28 @@
-# Omar Alchikha
+Hey, I'm Omar! I'm studying Electrical Engineering at York University and currently interning at De Havilland Aircraft. I like electronics, computers, and figuring out how things work. Most of my projects start because something caught my attention and I wanted to understand it better.
 
-**Electrical Engineering @ York University (Lassonde)** — power electronics, embedded hardware, and the electrical systems behind aircraft and EVs.
+At De Havilland I'm a Project Engineering Intern on the Dash 8 programs, and lately I've been getting into more of the avionics side. I graduate in May 2028. Outside of that I'm usually into cars (EVs and hybrids especially), gaming, or messing around with computer hardware.
 
-Currently a **Project Engineering Intern at De Havilland Aircraft of Canada**, working aircraft modification and engineering configuration on the Dash 8-123 & 400 programs. Graduating May 2028.
+## Projects I'd start with
 
-The repos here are personal project work, built on public engineering knowledge only. They run in three threads.
-
----
-
-### ⚡ The powertrain series
-
-Five projects that build on each other — each one designed against the **real measured output** of the one before it, not idealized numbers.
-
-| | Project | What it is |
+| Project | What I built | Status |
 |---|---|---|
-| 1 | **[buck-converter](https://github.com/OmarAlchikha/buck-converter)** | 12V→5V closed-loop converter. PI compensator derived from a state-space averaged plant, cross-validated across Python, LTspice and Simulink. |
-| 2 | **[DC-Motor-Speed-Controller-System-ID-PI](https://github.com/OmarAlchikha/DC-Motor-Speed-Controller-System-ID-PI)** | Motor speed loop where the plant is *identified from a step response*, not assumed — because friction and dead time aren't on any datasheet. |
-| 3 | **[Battery-SOC-Estimator](https://github.com/OmarAlchikha/Battery-SOC-Estimator)** | Coulomb counting vs. an extended Kalman filter. The EKF starts from a deliberately wrong state of charge and still beats it. |
-| 4 | **[Three-Phase-Inverter-PMSM-Drive-FOC](https://github.com/OmarAlchikha/Three-Phase-Inverter-PMSM-Drive-FOC)** | Field-oriented control of a PMSM traction drive, with loop gains derived from a delay budget rather than tuned. |
-| 5 | **[Hybrid-electric-powertrain-energy-management-controller](https://github.com/OmarAlchikha/Hybrid-electric-powertrain-energy-management-controller)** | Series-hybrid supervisor deciding the generator/battery power split across a flight-shaped mission. |
+| [FPGA-Digital-Control-Core-DE10-Lite](https://github.com/OmarAlchikha/FPGA-Digital-Control-Core-DE10-Lite) | Verilog PWM generator and quadrature decoder, verified with self-checking testbenches (23/23 pass) | RTL + simulation |
+| [buck-converter](https://github.com/OmarAlchikha/buck-converter) | 100 kHz, 12 V → 5 V converter with an analog PI loop; 7.77 kHz crossover, 49° phase margin | Python sim, build package ready |
+| [Three-Phase-Inverter-PMSM-Drive-FOC](https://github.com/OmarAlchikha/Three-Phase-Inverter-PMSM-Drive-FOC) | EV-style field-oriented motor control: 0 → 2000 rpm in 55 ms inside a 120 A limit | Python switching sim |
+| [Arc-fault-ground-fault-detection-for-DC-wiring](https://github.com/OmarAlchikha/Arc-fault-ground-fault-detection-for-DC-wiring) | Arc detector catching 99.3 % of arcs at a 0.33 % nuisance rate, with C firmware matching the Python reference | Monte-Carlo sim, hardware designed |
+| [Automatic-bus-transfer-controller](https://github.com/OmarAlchikha/Automatic-bus-transfer-controller) | Break-before-make 28 VDC source switching with a 120 ms worst-case dropout | Python sim |
+| [Battery-SOC-Estimator](https://github.com/OmarAlchikha/Battery-SOC-Estimator) | Extended Kalman filter that recovers from a 50 % wrong start and holds ±0.6 % SOC error | synthetic dataset |
 
-### ✈️ Aircraft electrical systems
+Each README has a short Project status section with what's done and what's next.
 
-Protection, monitoring, redundancy, and distribution — the systems that tell you the truth about an electrical system's state.
+**Other projects:** [DC motor speed control](https://github.com/OmarAlchikha/DC-Motor-Speed-Controller-System-ID-PI) · [caution/advisory panel](https://github.com/OmarAlchikha/System-health-aggregator-caution-advisory-panel) · [redundant sensor voting](https://github.com/OmarAlchikha/Redundant-sensor-voting-module) · [EMC test rig](https://github.com/OmarAlchikha/EMC-pre-compliance-rig) · [hybrid powertrain controller](https://github.com/OmarAlchikha/Hybrid-electric-powertrain-energy-management-controller)
 
-- **[System-health-aggregator-caution-advisory-panel](https://github.com/OmarAlchikha/System-health-aggregator-caution-advisory-panel)** — a simplified aircraft CAS panel. Sources report facts; one severity-policy table decides what gets annunciated.
-- **[Automatic-bus-transfer-controller](https://github.com/OmarAlchikha/Automatic-bus-transfer-controller)** — 28 VDC three-source transfer with strict break-before-make. Includes a deliberately-wrong version to *measure* why the sequencing matters.
-- **[Arc-fault-ground-fault-detection-for-DC-wiring](https://github.com/OmarAlchikha/Arc-fault-ground-fault-detection-for-DC-wiring)** — a series arc reduces current, so no breaker catches it. Detected by noise signature instead, validated against a physics-based waveform simulator.
-- **[Redundant-sensor-voting-module](https://github.com/OmarAlchikha/Redundant-sensor-voting-module)** — 2-out-of-3 mid-value-select voting with graceful degradation, and a deliberate refusal to guess when it can't arbitrate.
-- **[EMC-pre-compliance-rig](https://github.com/OmarAlchikha/EMC-pre-compliance-rig)** — near-field probe + LISN + SDR rig, with an emissions model that ranks mitigations before any parts are ordered.
+I use Claude Code as a design assistant and work through each part myself. Everything here is built from public, textbook-level engineering. Nothing comes from my employer.
 
-### 🔧 Digital hardware
+## Tools I use
 
-- **[FPGA-Digital-Control-Core-DE10-Lite](https://github.com/OmarAlchikha/FPGA-Digital-Control-Core-DE10-Lite)** — parameterized PWM generator and quadrature decoder in Verilog, with self-checking testbenches (23/23 checks) and a complete Quartus synthesis project.
+C, Python, Java, Verilog, MATLAB, LTspice, Quartus, Icarus Verilog, Arduino
 
----
+## Contact
 
-### How I work
-
-- **Cross-validation as a habit** — most projects carry two or three independent implementations that have to agree, sharing no code.
-- **Derive, don't tune** — controller gains come from a stated crossover, phase margin, or delay budget, never from twiddling until a plot looked right.
-- **Honest scope** — every repo states what's simulated, what's measured, and what's a placeholder.
-
-**Tools:** C · Python · Verilog · MATLAB/Simulink · LTspice · Quartus · Arduino · DE10-Lite
-
-📫 [om.alchikha@gmail.com](mailto:om.alchikha@gmail.com) · [LinkedIn](https://www.linkedin.com/in/omaral-chikha)
+[om.alchikha@gmail.com](mailto:om.alchikha@gmail.com) · [LinkedIn](https://www.linkedin.com/in/omaral-chikha) · [Portfolio](https://aerial-culotte-643.notion.site/Omar-Alchikha-2145470e82c98075ae93fd3308567f9f) · [Resume (PDF)](Omar_Alchikha_Resume.pdf)
